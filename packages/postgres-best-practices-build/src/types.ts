@@ -58,11 +58,3 @@ export interface ValidationResult {
   warnings: string[];
 }
 
-export interface TestCase {
-  ruleId: string;
-  ruleTitle: string;
-  type: "bad" | "good";
-  code: string;
-  language: string;
-  description?: string;
-}

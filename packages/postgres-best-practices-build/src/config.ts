@@ -16,7 +16,6 @@ export const RULES_DIR = join(SKILL_DIR, "rules");
 // Output files
 export const AGENTS_OUTPUT = join(SKILL_DIR, "AGENTS.md");
 export const METADATA_FILE = join(SKILL_DIR, "metadata.json");
-export const TEST_CASES_OUTPUT = join(BUILD_DIR, "test-cases.json");
 
 // Section prefix to number mapping
 export const SECTION_MAP: Record<string, number> = {

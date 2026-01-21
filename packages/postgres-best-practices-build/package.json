@@ -7,9 +7,7 @@
   "description": "Build system for Supabase agent skills",
   "scripts": {
     "build": "tsx src/build.ts",
-    "build-agents": "tsx src/build.ts --agents-only",
     "validate": "tsx src/validate.ts",
-    "extract-tests": "tsx src/extract-tests.ts",
     "dev": "npm run validate && npm run build"
   },
   "devDependencies": {
