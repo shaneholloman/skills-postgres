@@ -1,8 +1,12 @@
 # Supabase Agent Skills
 
-Agent Skills to help developers using AI agents with Supabase. Agent Skills are folders of instructions, scripts, and resources that agents like Claude Code, Cursor, Github Copilot, etc... can discover and use to do things more accurately and efficiently.
+Agent Skills to help developers using AI agents with Supabase. Agent Skills are
+folders of instructions, scripts, and resources that agents like Claude Code,
+Cursor, Github Copilot, etc... can discover and use to do things more accurately
+and efficiently.
 
-The skills in this repo follow the [Agent Skills](https://agentskills.io/) format.
+The skills in this repo follow the [Agent Skills](https://agentskills.io/)
+format.
 
 ## Installation
 
@@ -71,6 +75,7 @@ Help me add proper indexes to this table
 
 Each skill contains:
 
+- `.claude-plugin` - Exports the skills as a claude code plugin
 - `SKILL.md` - Instructions for the agent
 - `AGENTS.md` - Compiled rules document (generated)
 - `rules/` - Individual rule files
