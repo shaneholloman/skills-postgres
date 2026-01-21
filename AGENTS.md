@@ -5,15 +5,9 @@ etc.) when working with code in this repository.
 
 ## Repository Overview
 
-A collection of Postgres best practices skills for AI coding agents,
-maintained by Supabase. Skills are packaged instructions that extend agent
-capabilities for database optimization.
-
-## Installation
-
-```bash
-npx skills add supabase/agent-skills
-```
+A collection of Postgres best practices skills for AI coding agents, maintained
+by Supabase. Skills are packaged instructions that extend agent capabilities for
+database optimization.
 
 ## Creating a New Rule
 
@@ -65,7 +59,6 @@ tags: relevant, keywords
 -- Comment explaining what's wrong
 [Bad SQL example]
 ```
-````
 
 **Correct (description):**
 
@@ -73,12 +66,8 @@ tags: relevant, keywords
 -- Comment explaining why this is better
 [Good SQL example]
 ```
-
-**Supabase Note:** [Optional platform-specific guidance]
-
-Reference: [Link](url)
-
 ````
+
 ### Best Practices for Context Efficiency
 
 Skills are loaded on-demand. To minimize context usage:
@@ -98,7 +87,7 @@ cd packages/postgres-best-practices-build
 npm install
 npm run validate  # Check rule format
 npm run build     # Generate AGENTS.md
-````
+```
 
 ### Impact Levels
 
@@ -123,4 +112,3 @@ npm run build     # Generate AGENTS.md
 | `data-`     | Data Access Patterns     | 6 (MEDIUM)      |
 | `monitor-`  | Monitoring & Diagnostics | 7 (LOW-MEDIUM)  |
 | `advanced-` | Advanced Features        | 8 (LOW)         |
-

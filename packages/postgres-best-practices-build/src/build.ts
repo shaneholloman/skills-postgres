@@ -202,10 +202,6 @@ function buildAgents(): void {
         }
       }
 
-      if (rule.supabaseNotes) {
-        output.push(`**Supabase Note:** ${rule.supabaseNotes}\n`);
-      }
-
       if (rule.references && rule.references.length > 0) {
         if (rule.references.length === 1) {
           output.push(`Reference: ${rule.references[0]}\n`);

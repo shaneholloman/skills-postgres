@@ -195,14 +195,6 @@ function extractReferences(body: string): string[] {
 }
 
 /**
- * Extract Supabase notes
- */
-function extractSupabaseNotes(body: string): string | undefined {
-  const match = body.match(/\*\*Supabase Note:\*\*\s*(.+?)(?=\n\n|\n\*\*|$)/s);
-  return match ? match[1].trim() : undefined;
-}
-
-/**
  * Parse a rule file and return structured data
  */
 export function parseRuleFile(filePath: string): ParseResult {
@@ -237,8 +229,7 @@ export function parseRuleFile(filePath: string): ParseResult {
     // Extract other fields
     const explanation = extractExplanation(body);
     const examples = extractExamples(body);
-    const references = extractReferences(body);
-    const supabaseNotes = extractSupabaseNotes(body);
+
     const tags = frontmatter.tags?.split(",").map((t) => t.trim()) || [];
 
     // Validation warnings
@@ -258,9 +249,8 @@ export function parseRuleFile(filePath: string): ParseResult {
       impactDescription: frontmatter.impactDescription,
       explanation,
       examples,
-      references: references.length > 0 ? references : undefined,
+      references: extractReferences(body),
       tags: tags.length > 0 ? tags : undefined,
-      supabaseNotes,
     };
 
     return { success: true, rule, errors, warnings };

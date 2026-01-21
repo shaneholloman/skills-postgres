@@ -27,12 +27,12 @@ to recognize anti-patterns.
 
 Include specific metrics. Helps agents prioritize fixes.
 
-**Good:** "10x faster queries", "50% smaller index", "Eliminates N+1" **Bad:**
-"Faster", "Better", "More efficient"
+**Good:** "10x faster queries", "50% smaller index", "Eliminates N+1" 
+**Bad:** "Faster", "Better", "More efficient"
 
 ### 4. Self-Contained Examples
 
-Examples should be complete and runnable (or close to it). Include CREATE TABLE
+Examples should be complete and runnable (or close to it). Include `CREATE TABLE`
 if context is needed.
 
 ```sql
@@ -51,8 +51,8 @@ CREATE INDEX users_active_email_idx ON users(email) WHERE deleted_at IS NULL;
 
 Use meaningful table/column names. Names carry intent for LLMs.
 
-**Good:** `users`, `email`, `created_at`, `is_active` **Bad:** `table1`, `col1`,
-`field`, `flag`
+**Good:** `users`, `email`, `created_at`, `is_active`
+**Bad:** `table1`, `col1`, `field`, `flag`
 
 ---
 
@@ -120,7 +120,6 @@ const posts = await db.query("SELECT * FROM posts WHERE user_id = ANY($1)", [
 ]);
 ```
 
-````
 ---
 
 ## Impact Level Guidelines
@@ -133,24 +132,6 @@ const posts = await db.query("SELECT * FROM posts WHERE user_id = ANY($1)", [
 | **MEDIUM** | 1.5-3x | Redundant indexes, query plan instability |
 | **LOW-MEDIUM** | 1.2-2x | VACUUM tuning, configuration tweaks |
 | **LOW** | Incremental | Advanced patterns, edge cases |
-
----
-
-## Supabase-Specific Notes
-
-**When to Add:**
-- Supavisor pooling configuration
-- Dashboard features (index monitoring, query stats)
-- RLS patterns specific to Supabase auth
-- PostgREST implications
-
-**Format:**
-```markdown
-**Supabase Note:** The Dashboard > Database > Indexes page shows index usage statistics.
-````
-
-**Balance:** ~10% of content should be Supabase-specific. Core rules should work
-on any Postgres.
 
 ---
 
