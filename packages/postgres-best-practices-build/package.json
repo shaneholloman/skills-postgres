@@ -1,8 +1,10 @@
 {
   "name": "postgres-best-practices-build",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
+  "author": "Supabase",
+  "license": "MIT",
+  "description": "Build system for Supabase agent skills",
   "scripts": {
     "build": "tsx src/build.ts",
     "build-agents": "tsx src/build.ts --agents-only",

@@ -1,11 +1,8 @@
 # Supabase Agent Skills
 
-Agents skills to help you develope with Supabase. These skills provide AI coding
-agents like Claude Code, Cursor, Github Copilot, etc... with specialized
-instructions for building and optimizing production Postgres and Supabase
-applications.
+Agent Skills to help developers using AI agents with Supabase. Agent Skills are folders of instructions, scripts, and resources that agents like Claude Code, Cursor, Github Copilot, etc... can discover and use to do things more accurately and efficiently.
 
-Skills follow the [Agent Skills](https://agentskills.io/) format.
+The skills in this repo follow the [Agent Skills](https://agentskills.io/) format.
 
 ## Installation
 

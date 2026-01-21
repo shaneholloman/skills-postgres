@@ -1,7 +1,8 @@
 {
   "name": "supabase-agent-skills",
   "owner": {
-    "name": "Supabase"
+    "name": "Supabase",
+    "email": "support@supabase.com"
   },
   "metadata": {
     "description": "Official Supabase agent skills for Claude Code",
@@ -16,8 +17,7 @@
       "author": {
         "name": "Supabase"
       },
-      "repository": "https://github.com/supabase/agent-skills",
-      "license": "MIT",
+      "category": "database",
       "keywords": [
         "postgres",
         "postgresql",
@@ -29,7 +29,8 @@
         "rls",
         "indexing"
       ],
-      "category": "database"
+      "repository": "https://github.com/supabase/agent-skills",
+      "license": "MIT"
     }
   ]
 }
