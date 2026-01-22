@@ -951,7 +951,7 @@ Reference: https://supabase.com/blog/postgres-roles-and-privileges
 
 ### 5.2 Enable Row Level Security for Multi-Tenant Data
 
-**Impact: MEDIUM-HIGH (Database-enforced tenant isolation, prevent data leaks)**
+**Impact: CRITICAL (Database-enforced tenant isolation, prevent data leaks)**
 
 Row Level Security (RLS) enforces data access at the database level, ensuring users only see their own data.
 

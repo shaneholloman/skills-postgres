@@ -1,6 +1,6 @@
 ---
 title: Enable Row Level Security for Multi-Tenant Data
-impact: MEDIUM-HIGH
+impact: CRITICAL
 impactDescription: Database-enforced tenant isolation, prevent data leaks
 tags: rls, row-level-security, multi-tenant, security
 ---
