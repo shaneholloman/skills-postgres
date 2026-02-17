@@ -12,6 +12,26 @@ To ensure a positive and inclusive environment, please read our
 [code of conduct](https://github.com/supabase/.github/blob/main/CODE_OF_CONDUCT.md)
 before contributing.
 
+### Setup
+
+This project uses [mise](https://mise.jdx.dev/) to manage tool versions,
+environment variables, and project tasks. Install mise, then run from the
+repository root:
+
+```bash
+mise install        # Install Node.js (version defined in mise.toml)
+mise run install    # Install all npm dependencies
+```
+
+For LLM evals, copy the env example and add your API keys:
+
+```bash
+cp packages/evals/.env.example packages/evals/.env
+# Edit packages/evals/.env with your ANTHROPIC_API_KEY and OPENAI_API_KEY
+```
+
+mise automatically loads `.env` files defined in `mise.toml`.
+
 ## Issues
 
 If you find a typo, have a suggestion for a new skill/reference, or want to improve
@@ -39,14 +59,17 @@ We actively welcome your Pull Requests! Here's what to keep in mind:
 
 ### Pre-Flight Checks
 
-Before submitting your PR, please run these checks:
+Before submitting your PR, make sure you have the right tooling and run these
+checks:
 
 ```bash
-npm run validate  # Check reference format and structure
-npm run build     # Generate AGENTS.md from references
+mise install       # Ensure correct Node.js version
+mise run check     # Format and lint (auto-fix)
+mise run validate  # Check reference format and structure
+mise run build     # Generate AGENTS.md from references
 ```
 
-Both commands must complete successfully.
+All commands must complete successfully.
 
 ## Contributing New References
 
@@ -59,8 +82,8 @@ To add a reference to an existing skill:
 5. Run validation and build:
 
 ```bash
-npm run validate
-npm run build
+mise run validate
+mise run build
 ```
 
 ## Creating a New Skill
@@ -118,7 +141,7 @@ Example: `first-example-reference.md` for section "First Category"
 ### 5. Build
 
 ```bash
-npm run build
+mise run build
 ```
 
 The build system auto-discovers skills by looking for `SKILL.md` files.
